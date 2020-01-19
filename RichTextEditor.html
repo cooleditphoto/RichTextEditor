@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <style>
+    .editor {
+      border: solid 1px #ccc;
+      padding: 20px;
+      min-height: 200px;
+    }
+
+    .sample-toolbar {
+      border: solid 1px #ddd;
+      background: #f4f4f4;
+      padding: 5px;
+      border-radius: 3px;
+    }
+
+    .sample-toolbar>span {
+      cursor: pointer;
+    }
+
+    .sample-toolbar>span:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link
+    href='https://fonts.googleapis.com/css?family=Montez|Lobster|Josefin+Sans|Shadows+Into+Light|Pacifico|Amatic+SC:700|Orbitron:400,900|Rokkitt|Righteous|Dancing+Script:700|Bangers|Chewy|Sigmar+One|Architects+Daughter|Abril+Fatface|Covered+By+Your+Grace|Kaushan+Script|Gloria+Hallelujah|Satisfy|Lobster+Two:700|Comfortaa:700|Cinzel|Courgette'
+    rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript" src="editor.js"></script>
+</head>
+
+<body>
+
+  <a href="javascript:void(0)" onclick="format('bold')"><span class="fa fa-bold fa-fw"></span></a>
+  <a href="javascript:void(0)" onclick="format('italic')"><span class="fa fa-italic fa-fw"></span></a>
+  <a href="javascript:void(0)" onclick="format('insertunorderedlist')"><span class="fa fa-list fa-fw"></span></a>
+  <a href="javascript:void(0)" onclick="saveAsTxt()"><span class="fa fa-download fa-fw"></span></a>
+  <input type="text" id="rowNum">
+  <input type="text" id="columnNum">
+  <input type="text" id="tableName">
+  <a href="javascript:void(0)" onclick="tableCreate()"><span class="fa fa-table fa-fw"></span></a>
+
+  <div id="editor" contenteditable="true">
+    <p>Lorem ipsum</p>
+  </div>
+  <select id="selectFontFamily" name="selectFontFamily" onchange="updateFont();">
+    <option> Serif </option>
+    <option> Arial </option>
+    <option> Sans-Serif </option>
+    <option> Tahoma </option>
+    <option> Verdana </option>
+    <option> Lucida Sans Unicode </option>
+  </select>
+
+  <canvas width="200" height="200"></canvas>
+
+</body>
+
+</html>
