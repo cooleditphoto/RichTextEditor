@@ -28,6 +28,8 @@
   <link
     href='https://fonts.googleapis.com/css?family=Montez|Lobster|Josefin+Sans|Shadows+Into+Light|Pacifico|Amatic+SC:700|Orbitron:400,900|Rokkitt|Righteous|Dancing+Script:700|Bangers|Chewy|Sigmar+One|Architects+Daughter|Abril+Fatface|Covered+By+Your+Grace|Kaushan+Script|Gloria+Hallelujah|Satisfy|Lobster+Two:700|Comfortaa:700|Cinzel|Courgette'
     rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="editor.js"></script>
 </head>
 
 <body>
@@ -40,9 +42,8 @@
   <input type="text" id="columnNum">
   <a href="javascript:void(0)" onclick="tableCreate()"><span class="fa fa-table fa-fw"></span></a>
 
-  <main id="sampleeditor" contenteditable="true">
-    <p>Lorem ipsum</p>
-  </main>
+  <div id="sampleeditor" contenteditable="true">
+  </div>
   <select id="selecth1FontFamily" name="selectFontFamily" onchange="updateh1family();">
     <option> Serif </option>
     <option> Arial </option>
